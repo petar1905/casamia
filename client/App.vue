@@ -1,8 +1,14 @@
-<script setup>
+<script>
+	import Login from './components/Login.vue'
+	export default {
+		mounted() {
+		}
+	}
+	
 </script>
 
 <template>
-	<h1>Main Vue Page</h1>
+	<router-view/>
 </template>
 
 <style scoped>

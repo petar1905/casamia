@@ -9,14 +9,18 @@
     "dev:backend": "nodemon server/server.js"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "vue": "^3.2.47"
+    "jsonwebtoken": "^9.0.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
     "concurrently": "^8.0.1",
     "nodemon": "^2.0.22",
+    "prisma": "^4.14.1",
     "vite": "^4.3.2"
   }
 }
