@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-	<h1>Dashboard</h1>
+	<h1>Dashboard for {{$route.params.user}}</h1>
 </template>
 
 <style scoped></style>
