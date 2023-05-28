@@ -29,6 +29,7 @@
 		
 		<div class='form-group pt-1'>
 			<input class='form-control' v-model='username' 
+			@keyup.enter='register'
 			type='text' placeholder='Username'/>
 		</div>
 		

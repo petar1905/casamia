@@ -28,7 +28,7 @@
 		</div>
 		
 		<div class='form-group pt-1'>
-			<input v-model='username'
+			<input v-model='username' @keyup.enter='login'
 			class='form-control' type='text' placeholder='Username'/>
 		</div>
 		

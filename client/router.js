@@ -2,7 +2,7 @@ import {createRouter, createMemoryHistory} from 'vue-router'
 import Welcome from './components/Welcome.vue'
 import Login from './components/Login.vue'
 import Register from './components/Register.vue'
-import Dashboard from './components/Dashboard.vue'
+import Dashboard from './components/dashboard/Dashboard.vue'
 
 const routes = [
   {path: '/', component: Welcome},
