@@ -1,27 +1,49 @@
-<script></script>
+<script>
+	export default {
+		props:['msgCollection']
+	}
+</script>
 
 <template>
-	<div v-for='n in 100'>
-		<div class='m-1' v-if="n % 2 == 0">
-			<div class='bg-success text-white p-3 my-msg'>
-				<p v-if="n % 3 == 0 && n % 5 == 0">FizzBuzz</p>
-				<p v-else-if="n % 5 == 0">Buzz</p>
-				<p v-else-if="n % 3 == 0">Fizz</p>
-				<p v-else >{{n}}</p>
+	<div class='pt-5 pb-5' v-for='msg in msgCollection'>
+		<div class='m-1 d-flex justify-content-end' v-if='msg.user == $route.params.user'>
+			<div>
+				<div class='bg-primary text-white m-1 p-3 my-msg'>
+					<p>{{msg.msg}}</p>
+				</div>
+				<p class='m-1' style='text-align:right'>{{msg.user}}</p>
 			</div>
-			<p class='m-1' style='text-align:right'>Me</p>
+		</div>
+		
+		<div class='m-1 d-flex' v-else>
+			<div>
+				<div class='border border-dark m-1 p-3 msg'>
+					<p>{{msg.msg}}</p>
+				</div>
+				<p class='m-1'>{{msg.user}}</p>
+			</div>
+		</div>
+		
+	</div>
+	<!-- <div class='pt-5' v-for='n in 100'>
+		<div class='m-1 d-flex justify-content-end'>
+			<div>
+				<div class='bg-primary text-white p-3 my-msg'>
+					<p>Lorem Ipsum</p>
+				</div>
+				<p class='m-1' style='text-align:right'>Me</p>
+			</div>
 		</div>
 
-		<div class='m-1' v-else>
-			<div class='border border-dark m-1 p-3 msg'>
-				<p v-if="n % 3 == 0 && n % 5 == 0">FizzBuzz</p>
-				<p v-else-if="n % 5 == 0">Buzz</p>
-				<p v-else-if="n % 3 == 0">Fizz</p>
-				<p v-else>{{n}}</p>
+		<div class='m-1 d-flex'>
+			<div>
+				<div class='border border-dark m-1 p-3 msg'>
+					<p>Lorem Ipsum</p>
+				</div>
+				<p class='m-1'>Them</p>
 			</div>
-			<p class='m-1'>Them</p>
 		</div>
-	</div>
+	</div> -->
 </template>
 
 <style scoped>
